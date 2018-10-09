@@ -1,2 +1,2 @@
-# study
-for learn Java
+# 记录生活中小知识
+
