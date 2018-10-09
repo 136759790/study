@@ -12,5 +12,12 @@
    + 频繁作为查询条件的列适合作为索引。
    + 唯一性较差的不适合作为索引，比如性别等过滤后扔有大量数据。
    + 更新频繁的不适合座位索引，重建索引耗费性能。
++ 慢查询查找
+   + explain select * from a 查看执行计划。id select_type table type ....
+      + id 如果是子查询，id代表查询的优先级。
+      + select_type 查询的类型，主要是用于区分普通查询、联合查询、子查询等复杂的查询
+      + table 表名称
+      + type 查询种类（重要），system > const > eq_ref > ref > fulltext > ref_or_null > index_merge > unique_subquery > index_subquery > range > index > ALL
+      + rows 大概能查到的行数
 ## oracle
 
