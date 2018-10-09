@@ -12,7 +12,7 @@
    + 频繁作为查询条件的列适合作为索引。
    + 唯一性较差的不适合作为索引，比如性别等过滤后扔有大量数据。
    + 更新频繁的不适合座位索引，重建索引耗费性能。
-+ 慢查询查找
++ 慢查询查找 [传送门](https://blog.csdn.net/wuseyukui/article/details/71512793)
    + explain select * from a 查看执行计划。id select_type table type ....
       + id 如果是子查询，id代表查询的优先级。
       + select_type 查询的类型，主要是用于区分普通查询、联合查询、子查询等复杂的查询
