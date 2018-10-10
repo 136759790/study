@@ -5,7 +5,19 @@
 ### 问题
 + 插入的时候字段为String数据库为DateTime类型
    + 直接插入会报错，数据类型转换失败，需要插入的时候指定jdbctype，insert into String2Date values(#{starttime,jdbcType=TIMESTAMP},#{endtime})
-## spring
+## SPRING
+### bean的创建方式
+1. 构造方法创建bean
+   + 无参构造函数+setter方法注入属性
+   + 有参构造函数直接注入
+2. 实例工厂
+   + 实例工厂需要先创建工厂，再利用工厂类的创造方法创造bean
+3. 静态工厂
+   + 利用工厂类中的静态方法创建对象，注入到bean容器中。
+### Spring拦截器和Servlet过滤器的区别
+   1. 拦截器基于java的反射机制（AOP），过滤器基于函数回调。
+   2. 拦截器不依赖Servlet，可以用于方法中，过滤器依赖Servlet，只能拦截处理Servlet的请求。
+   3. Filter运行在Servlet之前所以运行在拦截器之前。
 ## TCP协议
 + 三次握手
    + client 发送（SYN）连接请求（seq=x），自身进入syn_end状态。
